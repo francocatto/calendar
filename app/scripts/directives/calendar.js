@@ -7,7 +7,7 @@
  * # liftpetCalendar
  */
 angular.module('calendarApp')
-  .directive('liftpetCalendar', function () {
+  .directive('calendar', function () {
 
     function _buildWeek(date, month) {
       var days = [];

@@ -1,17 +1,23 @@
-<div class="header">
-  <i class="fa fa-angle-left" ng-click="previous()"></i>
-  <span>{{month.format("MMMM, YYYY")}}</span>
-  <i class="fa fa-angle-right" ng-click="next()"></i>
+<div>
+<div class="month">
+  <ul>
+    <li class="prev" ng-click="previous()">❮</li>
+    <li class="next" ng-click="next()">❯</li>
+    <li style="text-align:center">{{month.format("MMMM, YYYY")}}<br></li>
+  </ul>
 </div>
-<div class="week names">
-  <span class="day">Sun</span>
-  <span class="day">Mon</span>
-  <span class="day">Tue</span>
-  <span class="day">Wed</span>
-  <span class="day">Thu</span>
-  <span class="day">Fri</span>
-  <span class="day">Sat</span>
-</div>
-<div class="week" ng-repeat="week in weeks">
-  <span class="day" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }" ng-click="select(day)" ng-repeat="day in week.days">{{day.number}}</span>
+
+<ul class="weekdays">
+  <li>Se</li>
+  <li>Te</li>
+  <li>Qu</li>
+  <li>Qu</li>
+  <li>Se</li>
+  <li>Sa</li>
+  <li>Do</li>
+</ul>
+
+<ul class="days" ng-repeat="week in weeks">
+  <li ng-class="{ active: day.isToday, active: day.date.isSame(selected) }" ng-click="select(day)" ng-repeat="day in week.days">{{day.number}}</li>
+</ul>
 </div>
