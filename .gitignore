@@ -3,3 +3,9 @@
 /.tmp
 /.sass-cache
 /bower_components
+
+app/fonts/
+
+app/bower_components/
+
+\.idea/
