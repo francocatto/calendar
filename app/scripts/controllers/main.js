@@ -10,4 +10,9 @@
 angular.module('calendarApp')
   .controller('MainCtrl', function ($scope) {
     $scope.day = moment();
+
+    $scope.formatarData = function(day) {
+      var retorno = day;
+      return retorno.format('DD/MM/YYYY');
+    };
   });

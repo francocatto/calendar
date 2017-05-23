@@ -1,23 +1,24 @@
-<div>
-<div class="month">
-  <ul>
-    <li class="prev" ng-click="previous()">❮</li>
-    <li class="next" ng-click="next()">❯</li>
-    <li style="text-align:center">{{month.format("MMMM, YYYY")}}<br></li>
-  </ul>
+<div class="calendar_clean">
+  <div class="calendar">
+      <ul class="calendar_header">
+        <li class="calendar_header_prevMont" ng-click="previous()">❮</li>
+        <li class="calendar_header_currentMonth">{{month.format("MMMM") | uppercase}}</li>
+        <li class="calendar_header_nextMonth" ng-click="next()">❯</li>
+      </ul>
+      <div class="calendar_body">
+        <ul class="calendar_body_weekdays">
+          <li>Se</li>
+          <li>Te</li>
+          <li>Qu</li>
+          <li>Qu</li>
+          <li>Se</li>
+          <li>Sa</li>
+          <li>Do</li>
+        </ul>
+        <ul class="calendar_body_weekIteration" ng-repeat="week in weeks">
+          <li class="calendar_body_dayIteration" ng-click="select(day)" ng-repeat="day in week.days"><span ng-class="{selectedDay: day.isToday, selectedDay: day.date.isSame(selected) }">{{day.number}}</span></li>
+        </ul>
+      </div>
+    </div>
 </div>
 
-<ul class="weekdays">
-  <li>Se</li>
-  <li>Te</li>
-  <li>Qu</li>
-  <li>Qu</li>
-  <li>Se</li>
-  <li>Sa</li>
-  <li>Do</li>
-</ul>
-
-<ul class="days" ng-repeat="week in weeks">
-  <li ng-class="{ active: day.isToday, active: day.date.isSame(selected) }" ng-click="select(day)" ng-repeat="day in week.days">{{day.number}}</li>
-</ul>
-</div>

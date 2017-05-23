@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc directive
- * @name calendarApp.directive:liftpetCalendar
+ * @name calendarApp.directive:calendar
  * @description
- * # liftpetCalendar
+ * # calendar
  */
 angular.module('calendarApp')
   .directive('calendar', function () {
@@ -26,7 +26,7 @@ angular.module('calendarApp')
     }
 
     function _removeTime(date) {
-      return date.day(0).hour(0).minute(0).second(0).millisecond(0);
+      return date.hour(0).minute(0).second(0).millisecond(0);
     }
 
     function _buildMonth(scope, start, month) {

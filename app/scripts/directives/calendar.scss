@@ -1,503 +1,66 @@
-$positive: #5901FF;
-$calm: #3B5998;
-$stable: #FFC900;
-$BACKGROUND_TRANSPARENTE: rgba(255,255,255,0.4);
-$item-avatar-width: 60px !default;
-$item-avatar-height: 60px !default;
-.seta-pequena {
-  font-size: 12px !important;
-}
-
-.enviefoto {
-  position: absolute;
-  z-index: 99999;
-  margin: -50px 0 0 20px;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 1.3em;
-  text-shadow: 2px 2px 2px black;
-}
-
-.cartao-pedido {
-  .item {
-    border: 0 !important;
-  }
-
-}
-.platform-android .bar .title {
-  line-height: 2.5em!important;
-  text-align: center;
-}
-
-.ultima-avaliacao {
-  border: 1px dotted #ede;
-  border-radius: 5px;
-  background-color: #eee;
-  h3,h4,h5 {
-    margin-bottom: 0px !important;
-  }
-
-}
-.icone-cadastro-animal {
-  font-size: 74px;
-  color: #FFD801;
-}
-
-.tituloshop {
-  line-height: 1em;
-  font-size: 2.3em;
-  padding-left: 5px;
-}
-
-.headershop {
-  transform: translateY(-10%);
-  position: relative;
-  z-index: 999;
-  margin-top: -20px;
-  img {
-    border: 3px solid white;
-    box-shadow: 1px 1px 5px lightgrey;
-  }
-
-}
-.perfil {
-  .bar.bar-header {
-    background: rgba(255,255,255,.10);
-  }
-
-}
-.headerperfil {
-  position: absolute;
-  top: 30px;
-  z-index: 9999;
-  a {
-    color: #fff !important;
-    font-size: 1.7em;
-    text-decoration: none;
-  }
-
-}
-.botao-cadastro-animal {
-  position: absolute;
-  left: 75%;
-  z-index: 999;
-}
-
-.enderecos {
-  .list {
-    margin-bottom: 0px !important;
-  }
-
-}
-.bar.bar-header {
-  background-color: #FFD801;
-  border-color: #5901FF;
-  border-bottom: 2px dotted;
-  color: #5901FF !important;
-}
-
-.bar .title {
-  line-height: 34px!important;
-  color: #5901FF !important;
-}
-
-.bar.bar-stable .title {
-  font-size: 14pt;
-  font-weight: bold;
-  color: #5901FF !important}
-.bar-stable .button {
-  color: #5901FF !important}
-
-/*.topolista {
-  background-color: #FFD801;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}*/
-
 /**
-  LISTAGEM DE PETHSOPS
+CALENDAR
  */
-.petshops-container {
+.calendar {
+  all: initial;
+  * {
+    all: unset;
+  }
+}
+.calendar_header {
   display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  align-items: stretch;
-}
-.petshops-topo-container {
-  diplay: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-color: #FFD801;
-  height: 100px;
-}
-.petshops-topo-endereco-select {
-  background-color: #FFD801;
-  border: none;
-  height: 25px;
-
-}
-.petshops-topo-form {
-  width: 100%;
-}
-.procurarpelonome {
-  color: #FFFFFF!important;
-  width: 80%;
-  margin: 0 auto;
-  background-color: #000;
-  border-radius: 15px;
-}
-.procurarpelonome input {
-  color: #FFFFFF!important;
-  font-size: 1.1em;
-}
-.petshops-lista-container {
-}
-.listapetshop {
-  padding-left: 70px;
-}
-
-#vagahorario {
-  list-style: none;
-  inline-box-align: initial;
-}
-
-#vagahorario li {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 15px;
-  width: calc(25% - 6px);
-  text-decoration: none;
-  background-color: #fff;
-  margin: 3px;
-  border-radius: 3px;
-  border: 1px solid #eee;
-}
-
-ul {
+  flex-direction: row;
+  justify-content: space-between;
   list-style-type: none;
-}
-
-.month {
   padding: 15px;
-  width: 100%;
   background: #FFD801;
+  letter-spacing: 3px;
 }
 
-.month ul {
-  margin: 0;
-  padding: 0;
-}
-
-.month ul li {
+.calendar_header_currentMonth{
   color: black;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
+  text-align: center;
 }
-
-.month .prev {
-  float: left;
-  padding-top: 0px;
+.calendar_header_prevMont {
 }
-
-.month .next {
-  float: right;
-  padding-top: 0px;
+.calendar_header_nextMonth {
 }
-
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
+.calendar_body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.calendar_body_weekdays {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 5px;
   background-color: #eee;
-}
-
-.weekdays li {
-  display: inline-block;
-  width: 13.6%;
   color: #666;
   text-align: center;
 }
-
-.days {
-  padding: 10px 0;
-  background: #fff;
-  margin: 0;
+.calendar_body_weekdays li {
+  width: 14%;
+  padding: 5px;
 }
-
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #777;
-}
-
-.active {
+.selectedDay {
   padding: 5px;
   background: #FFD801;
   color: white !important;
   border-radius: 30px;
 }
-
-/* Add media queries for smaller screens */
-@media screen and (max-width: 720px) {
-  .weekdays li, .days li {
-    width: 13.1%;
-  }
-
-}
-@media screen and (max-width: 420px) {
-  .weekdays li, .days li {
-    width: 12.5%;
-  }
-
-  .active {
-    padding: 2px;
-  }
-
-}
-@media screen and (max-width: 290px) {
-  .weekdays li, .days li {
-    width: 12.2%;
-  }
-
-}
-#periodohorario {
-  list-style: none;
-  inline-box-align: initial;
-  display-inline: block;
-}
-
-#periodohorario li {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 13px;
-  font-weight: 300;
-  text-decoration: none;
-  background-color: #eee;
-  margin: 3px 3px 3px 0px;
-  border-radius: 5px;
-}
-
-#periodohorario li:first-child {
-  margin-right: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  border-top-right-radius: 0px !important;
-}
-
-#periodohorario li:nth-child(2) {
-  border-bottom-left-radius: 0px!important;
-  border-top-left-radius: 0px!important;
-}
-
-.activew {
-  background-color: #FFD801 !important;
-}
-
-.stickbutton {
-  position: fixed;
-  bottom: 0;
-}
-
-.centro {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.calendar_body_weekIteration {
+  list-style-type: none;
   display: flex;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  justify-content: space-between;
+  color: #777;
 }
 
-.icone {
-  font-size: 50px;
-}
-
-.wide-as-needed {
-  overflow: scroll;
-  white-space: nowrap;
-}
-
-.scroll {
-  min-width: 100%;
-}
-
-.no-padding {
-  padding: 0px !important;
-}
-
-.avatar-img {
-  margin: auto;
-  width: 20vw;
-  height: 20vw;
-  border-radius: 50%;
-  // half for rounding */
-  object-fit: cover;
-  /* Scale the image - Center and crop image*/
-  object-position: center;
-  /* Center the image within the element - Center and crop image*/}
-#menudiadasemana li {
-  float: left;
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-}
-
-.diadasemana {
-  font-weight: bold;
-  font-size: 1.5em;
-  line-height: 1.2em;
-}
-
-ul a {
-  display: inline-block;
-  width: 25%;
-  padding: .75rem 0;
-  margin-left: 10px;
-  text-decoration: none;
-  color: #333;
-}
-
-ul li a:hover::before, .ativo::before {
-  content: '';
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  margin-left: -12px;
-  margin-top: -8px;
-  -moz-border-radius: 7.5px;
-  -webkit-border-radius: 7.5px;
-  border-radius: 20px;
-  background-color: #FFD801;
-  position: absolute;
-  z-index: -2;
-}
-
-.side-menu-background {
-  /* Permalink - use to edit and share this gradient: http: //colorzilla.com/gradient-editor/#ffd801+0,ffe97f+100 */
-  background: rgb(255,216,1);
-  /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(255,216,1,1) 0%, rgba(255,233,127,1) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(255,216,1,1) 0%,rgba(255,233,127,1) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(255,216,1,1) 0%,rgba(255,233,127,1) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd801', endColorstr='#ffe97f',GradientType=0 );
-  /* IE6-9 */
-  h3 {
-    color: #000}
-;
-}
-
-.side-menu-item {
-  background: none;
-  color: #5901FF;
-  font-weight: 400;
-  border: 0;
-  .item-content {
-    background: none;
-    &.activated {
-      background: $BACKGROUND_TRANSPARENTE;
-    }
-
-  }
-}
-.side-menu-pic {
-  img {
-    border-radius: 50%;
-    border: 4px solid $BACKGROUND_TRANSPARENTE;
-  }
-
-}
-.icone-medio {
-  font-size: 40px;
-}
-
-.no-margin {
-  margin: 0px !important;
-}
-
-@media screen and (min-width: 768px) {
-  .spacer {
-    height: 3% !important;
-  }
-
-}
-.platform-ipad .logo-inicio {
-  img {
-    width: 30px !important;
-  }
-
-}
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-  .logo-inicio {
-    img {
-      width: 100px !important;
-    }
-
-  }
-  .ipad-portrait {
-    color: red;
-  }
-
-  /* your css rules for ipad portrait */}
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
-  .ipad-landscape {
-    color: blue;
-  }
-
-  /* your css rules for ipad landscape */}
-body.platform-ios {
-  font-family: 'Open Sans', sans-serif;
-}
-
-.ionic-body.platform-ios {
-  font-family: 'Open Sans', sans-serif;
-}
-
-body.platform-android {
-  font-family: 'Open Sans', sans-serif;
-}
-
-.ionic-body.platform-android {
-  font-family: 'Open Sans', sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.tab-item,input,button,select,textarea {
-  font-family: inherit;
+.calendar_body_dayIteration {
+  width: 14%;
+  text-align: center;
+  padding: 5px;
 }
